@@ -1,0 +1,66 @@
+$card-background-color: #FAFAFA;
+$pets-section-color: #F6F6F6;
+$donation-section-color: #F6F6F6;
+
+//buttons color scheme
+$open-all-btn-color: #F1CDB3;
+$btn-border-color: #F1CDB3;
+$btn-hover-color: #FDDCC4;
+
+
+
+.btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 45px;
+    border-radius: 100px;
+
+    &:hover {
+        cursor: pointer;
+        background-color: $btn-hover-color;
+    }
+}
+
+.pets{
+    background-color: $pets-section-color;
+}
+
+.pets-slider {
+    display: grid;
+    grid-template-columns: repeat(3, 270px);
+    column-gap: 90px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 435px;
+    background-color: $card-background-color;
+    border-radius: 9px;
+
+    &:hover {
+        cursor: pointer;
+            .btn {
+                background-color: $btn-hover-color;
+            }
+
+    }
+
+    .btn {
+        width: 187px;
+        height: 52px;
+        border: 2px solid $btn-border-color;
+        box-sizing: border-box;
+    }
+}
+.open-all-btn {
+    width: 261px;
+    height: 52px;
+    background-color: $open-all-btn-color;
+    border: none;
+
+}
+
