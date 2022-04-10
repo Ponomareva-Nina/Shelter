@@ -3,11 +3,93 @@ $pets-section-color: #F6F6F6;
 $donation-section-color: #F6F6F6;
 
 //buttons color scheme
-$open-all-btn-color: #F1CDB3;
+$colored-btn-color: #F1CDB3;
 $btn-border-color: #F1CDB3;
+$logo-color: #F1CDB3;
 $btn-hover-color: #FDDCC4;
 
+.logo-title {
+    font-family: "Georgia", serif; 
+    font-weight: 400;
+    font-size: 32px; 
+    line-height: 35px;
+    color: $logo-color;
+    letter-spacing: 0.06em;
+}
 
+.logo-subtitle {
+    font-family: "Arial", sans-serif; 
+    font-weight: 400;
+    font-size: 13px; 
+    line-height: 15px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+}
+
+.font-link {
+    font-family: "Arial", sans-serif; 
+    font-weight: 400;
+    font-size: 15px; 
+    line-height: 160%;
+}
+
+.font-text {
+    font-family: "Arial", sans-serif; 
+    font-weight: 400;
+    font-size: 15px; 
+    line-height: 24px;
+}
+
+.font-title {
+    font-family: "Georgia"; 
+    font-weight: 400;
+    font-size: 35px; 
+    line-height: 45px;
+}
+
+.font-remark {
+
+}
+
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.active {
+    border-bottom: 3px solid #F1CDB3;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+    max-width: 1200px;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wrapper {
+    max-width: 1200px;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    margin-left: auto;
+    margin-right: auto;
+     
+    margin-bottom: 80px;
+}
 
 .btn {
     display: flex;
@@ -16,20 +98,70 @@ $btn-hover-color: #FDDCC4;
     padding: 15px 45px;
     border-radius: 100px;
 
+    font-family: "Arial", sans-serif; 
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 130%;
+
     &:hover {
         cursor: pointer;
         background-color: $btn-hover-color;
     }
 }
 
+.main-nav {
+    display: flex;
+    margin-top: 15px;
+}
+
+.nav-link {
+    color: #CDCDCD;
+    margin-left: 35px;
+    padding: 5px 0;
+}
+
+.start-screen-wrapper {
+    background: linear-gradient(to right, #49372a 0%, #1A1A1C 50%, #211F20 100%);
+    height: 900px;
+    overflow: hidden;
+}
+
+.start-screen {
+    display: flex;
+}
+
+.start-screen-title {
+    font-family: "Georgia"; 
+    font-weight: 400;
+    font-size: 44px; 
+    line-height: 130%;
+    color: #FFFFFF;
+    max-width: 310px;
+}
+
+.start-screen-image {
+    margin-top: 60px;
+}
+
 .pets{
     background-color: $pets-section-color;
+}
+.start-screen-content {
+    max-width: 460px;
+    margin-right: auto;
+    align-self: center;
+
+    p {
+        color: #CDCDCD;
+        margin: 42px 0;
+    }
 }
 
 .pets-slider {
     display: grid;
     grid-template-columns: repeat(3, 270px);
     column-gap: 90px;
+    justify-content: center;
 }
 
 .card {
@@ -59,8 +191,14 @@ $btn-hover-color: #FDDCC4;
 .open-all-btn {
     width: 261px;
     height: 52px;
-    background-color: $open-all-btn-color;
+    background-color: $colored-btn-color;
     border: none;
-
 }
 
+.make-friend-btn {
+    width: 207px;
+    height: 52px;
+    background-color: $colored-btn-color;
+    border: none;
+    margin-bottom: 70px;
+}
