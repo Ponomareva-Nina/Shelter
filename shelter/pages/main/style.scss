@@ -349,10 +349,37 @@ footer {
     background: URL("../../assets/images/noise_transparent.png"), 
     linear-gradient(to right, #49372a 0%, #1A1A1C 50%, #211F20 100%);
     padding-top: 40px;
+
+    .font-title {
+        color: #FFFFFF;
+    }
 }
 .footer-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 160px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
 }
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 302px;
+    margin-top: 15px;
+    margin-bottom: 60px;
+}
+.contact-item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
 
+
+    .address {
+        font-size: 20px;
+        line-height: 115%;
+        color: #F1CDB3;
+    }
+}
+.footer-image {
+    justify-self: end;
+}
