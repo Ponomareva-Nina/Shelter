@@ -23,31 +23,6 @@ $btn-hover-color: #FDDCC4;
     src: url("../../assets/fonts/georgia/georgia-regular.ttf");
 }
 
-.logo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.logo-title {
-    font-family: "Georgia", serif; 
-    font-weight: 400;
-    font-size: 32px; 
-    line-height: 35px;
-    color: $logo-color;
-    letter-spacing: 0.06em;
-    padding-bottom: 10px;
-}
-
-.logo-subtitle {
-    font-family: "Arial", sans-serif; 
-    font-weight: 400;
-    font-size: 13px; 
-    line-height: 15px;
-    letter-spacing: 0.1em;
-    color: #FFFFFF;
-}
-
 .font-link,
 .font-text {
     font-family: "Arial", sans-serif; 
@@ -66,7 +41,12 @@ $btn-hover-color: #FDDCC4;
 }
 
 .font-remark {
-
+    font-family: "Arial", sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #B2B2B2;
 }
 
 h1, h2, h3, p {
@@ -84,9 +64,6 @@ a {
     text-decoration: none;
 }
 
-.active {
-    border-bottom: 3px solid #F1CDB3;
-}
 
 header {
     display: flex;
@@ -97,6 +74,42 @@ header {
     margin-left: auto;
     margin-right: auto;
 }
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo-title {
+    font-family: "Georgia", serif; 
+    font-weight: 400;
+    font-size: 32px; 
+    line-height: 35px;
+    color: $logo-color;
+    letter-spacing: 0.06em;
+    padding-bottom: 10px;
+}
+.logo-subtitle {
+    font-family: "Arial", sans-serif; 
+    font-weight: 400;
+    font-size: 13px; 
+    line-height: 15px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+}
+
+.main-nav {
+    display: flex;
+    margin-top: 15px;
+}
+.nav-link {
+    color: #CDCDCD;
+    margin-left: 35px;
+    padding: 5px 0;
+}
+.active {
+    border-bottom: 3px solid #F1CDB3;
+}
+
 
 .wrapper {
     max-width: 1200px;
@@ -125,27 +138,14 @@ header {
     }
 }
 
-.main-nav {
-    display: flex;
-    margin-top: 15px;
-}
-
-.nav-link {
-    color: #CDCDCD;
-    margin-left: 35px;
-    padding: 5px 0;
-}
 
 .start-screen-wrapper {
     background: URL("../../assets/images/noise_transparent.png"), 
     linear-gradient(to right, #49372a 0%, #1A1A1C 50%, #211F20 100%);
-    overflow: hidden;
 }
-
 .start-screen {
     display: flex;
 }
-
 .start-screen-content {
     max-width: 460px;
     margin-right: auto;
@@ -158,12 +158,10 @@ header {
         margin: 42px 0;
     }
 }
-
 .start-screen-image {
     margin-top: 60px;
     align-content: flex-end;
 }
-
 .start-screen-title {
     font-family: "Georgia";
     font-style: normal;
@@ -173,7 +171,6 @@ header {
     color: #FFFFFF;
     max-width: 310px;
 }
-
 .make-friend-btn {
     width: 207px;
     height: 52px;
@@ -182,13 +179,13 @@ header {
     margin-bottom: 25px;
 }
 
+
 .about {
     display: flex;
     justify-content: center;
     gap: 120px;
     padding: 80px 0 100px;
 }
-
 .about-content {
     max-width: 430px;
     display: flex;
@@ -199,6 +196,7 @@ header {
         margin-top: 25px;
     }
 }
+
 
 .pets{
     background-color: $pets-section-bg-color;
@@ -212,19 +210,16 @@ header {
         margin-right: auto;
     }
 }
-
 .pets-slider {
     display: grid;
     grid-template-columns: repeat(3, 270px);
     column-gap: 90px;
     justify-content: center;
 }
-
 .pets-title {
     font-size: 20px;
     line-height: 23px;
 }
-
 .card {
     display: flex;
     flex-direction: column;
@@ -259,5 +254,105 @@ header {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+.arrow-btn {
+    width: 52px;
+    height: 52px;
+    color: #292929;
+    border: 2px solid #F1CDB3;
+    box-sizing: border-box;
+    border-radius: 100px;
+    position: absolute;
+    top: 43%;
+
+    &:hover {
+        background-color: $btn-hover-color;
+        cursor: pointer;
+    }
+}
+.slider-wrapper {
+    position: relative;
+}
+.back {
+    left: 0%;
+}
+.forward {
+    right: 0%; 
+}
+.help {
+    padding-top: 80px;
+    padding-bottom: 100px;
+
+    h2 {
+        max-width: 310px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 60px;
+    }
+}
+.needed-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 120px;
+    row-gap: 55px;
+}
+.item {
+    text-align: center;
+    font-size: 20px;
+    line-height: 115%;
+    color: $title-color;
+    
+    p {
+        margin-top: 30px;
+    }
+}
+
+
+.donation {
+    background-color: $donation-section-color;
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+.donation-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.donation-content {
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.bank-account {
+    font-size: 15px;
+    line-height: 110%;
+}
+.card-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-size: 20px;
+    line-height: 115%;
+    background-color: #F1CDB3;
+    border-radius: 9px;
+    padding: 10px 15px;
+    width: max-content;
+}
+
+footer {
+    background: URL("../../assets/images/noise_transparent.png"), 
+    linear-gradient(to right, #49372a 0%, #1A1A1C 50%, #211F20 100%);
+    padding-top: 40px;
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 160px;
 }
 
