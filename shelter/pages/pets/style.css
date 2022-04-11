@@ -1,0 +1,326 @@
+@font-face {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../assets/fonts/arial/arial-regular.ttf");
+}
+
+@font-face {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../assets/fonts/georgia/georgia-regular.ttf");
+}
+
+.font-link,
+.font-text {
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: #545454;
+}
+
+.font-title {
+  font-family: "Georgia";
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  max-width: 1200px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo-title {
+  font-family: "Georgia";
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  margin-bottom: 10px;
+}
+
+.logo-title a {
+  color: #545454;
+}
+
+.logo-subtitle {
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  color: #292929;
+}
+
+.main-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 15px;
+}
+
+.nav-link {
+  margin-left: 35px;
+  padding: 5px 0;
+}
+
+.nav-link:hover {
+  color: #292929;
+}
+
+.active {
+  border-bottom: 3px solid #F1CDB3;
+}
+
+.pets {
+  background-color: #F6F6F6;
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+
+.pets-header {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 400px;
+}
+
+.pets-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -webkit-column-gap: 40px;
+          column-gap: 40px;
+  row-gap: 30px;
+  margin-top: 60px;
+}
+
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 43px;
+  border-radius: 100px;
+  font-family: "Georgia", serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+  color: #292929;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: #FDDCC4;
+}
+
+.pets-slider {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (270px)[3];
+      grid-template-columns: repeat(3, 270px);
+  -webkit-column-gap: 90px;
+          column-gap: 90px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pet-name {
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 435px;
+  background-color: #FAFAFA;
+  border-radius: 9px;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+.card:hover .btn {
+  background-color: #FDDCC4;
+}
+
+.card .btn {
+  width: 187px;
+  height: 52px;
+  border: 2px solid #F1CDB3;
+  background-color: #FFFFFF;
+  margin-bottom: 30px;
+}
+
+.btns-panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 340px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 45px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 20px;
+  letter-spacing: 0.06em;
+}
+
+.btns-panel .current {
+  background-color: #FDDCC4;
+}
+
+.btns-panel .disabled {
+  border: 2px solid #CDCDCD;
+  color: #CDCDCD;
+}
+
+.btns-panel .disabled:hover {
+  background-color: #F6F6F6;
+  color: #CDCDCD;
+}
+
+.slide-btn {
+  width: 52px;
+  height: 52px;
+  color: #292929;
+  border: 2px solid #F1CDB3;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 100px;
+  background-color: #F6F6F6;
+}
+
+.slide-btn:hover {
+  background-color: #FDDCC4;
+  cursor: pointer;
+}
+
+footer {
+  background: URL("../../assets/images/noise_transparent.png"), -webkit-gradient(linear, left top, right top, from(#49372a), color-stop(50%, #1A1A1C), to(#211F20));
+  background: URL("../../assets/images/noise_transparent.png"), linear-gradient(to right, #49372a 0%, #1A1A1C 50%, #211F20 100%);
+  padding-top: 40px;
+}
+
+footer .font-title {
+  color: #FFFFFF;
+}
+
+.footer-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 40px;
+  max-width: 302px;
+  margin-top: 15px;
+  margin-bottom: 60px;
+}
+
+.contact-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact-item .address {
+  font-size: 20px;
+  line-height: 115%;
+  color: #F1CDB3;
+}
+
+.footer-image {
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+/*# sourceMappingURL=style.css.map */
