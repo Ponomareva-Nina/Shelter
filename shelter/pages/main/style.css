@@ -304,6 +304,7 @@ header {
 
 .card:hover {
   cursor: pointer;
+  background-color: #FFFFFF;
 }
 
 .card:hover .btn {

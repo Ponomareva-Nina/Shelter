@@ -1,4 +1,5 @@
 $card-background-color: #FAFAFA;
+$card-hover-bg-color: #FFFFFF;
 $pets-section-bg-color: #F6F6F6;
 $donation-section-color: #F6F6F6;
 $logo-color: #F1CDB3;
@@ -245,6 +246,8 @@ header {
 
     &:hover {
         cursor: pointer;
+        background-color: $card-hover-bg-color;
+
             .btn {
                 background-color: $btn-hover-color;
             }
