@@ -105,6 +105,8 @@ header {
 
     &:hover {
         color: #292929;
+        border-bottom: 3px solid #F1CDB3;
+        transition: 0.1s;
     }
 }
 .active {
@@ -131,6 +133,7 @@ header {
     column-gap: 40px;
     row-gap: 30px;
     margin-top: 60px;
+    padding-bottom: 15px; 
 }
 
 .btn {
@@ -175,6 +178,8 @@ header {
 
     &:hover {
         cursor: pointer;
+        background-color: #FFFFFF;
+
             .btn {
                 background-color: $btn-hover-color;
             }
@@ -201,15 +206,21 @@ header {
 
     .current {
         background-color: $btn-hover-color;
+
+        &:hover {
+            cursor: default;
+        }
     }
 
     .disabled {
         border: 2px solid $disabled;
         color: $disabled;
+       
 
         &:hover {
             background-color: $pets-section-bg-color;
-            color: $disabled;
+            color: $disabled; 
+            cursor: default;
         }
     }
 }
@@ -222,6 +233,12 @@ header {
     border-radius: 100px;
     background-color: $pets-section-bg-color;
 
+    font-family: "Georgia"; 
+    font-weight: 400;
+    font-size: 20px; 
+    line-height: 115%;
+    letter-spacing: 0.06em;
+
     &:hover {
         background-color: $btn-hover-color;
         cursor: pointer;
@@ -229,29 +246,29 @@ header {
 }
 
 
+
 footer {
     background: URL("../../assets/images/noise_transparent.png"), 
     linear-gradient(to right, #49372a 0%, #1A1A1C 50%, #211F20 100%);
-    padding-top: 40px;
+    height: 350px;
 
     .font-title {
         color: #FFFFFF;
     }
 }
 .footer-grid {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: 279px 302px 300px;
+    gap: 160px;
 }
 .footer-column {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: flex-start;
-    gap: 40px;
-    max-width: 302px;
-    margin-top: 15px;
-    margin-bottom: 60px;
+    padding: 56px 0 60px;
 }
+
 .contact-item {
     display: flex;
     gap: 20px;
@@ -265,5 +282,5 @@ footer {
     }
 }
 .footer-image {
-    justify-self: end;
+    padding-top: 40px;
 }
