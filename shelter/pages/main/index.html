@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shelter</title>
+    <title>Shelter Cozy House</title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="style.css">
 
@@ -14,14 +14,14 @@
 </head>
 <body>
     <div class="start-screen-wrapper">
-        <header>
-            <div class="logo">
+        <header class="header wrapper">
+            <div class="header__logo">
                 <h1 class="logo-title"><a href="index.html">Cozy House</a></h1>
                 <a href="index.html" class="logo-subtitle">Shelter for pets in Boston<a>
             </div>
             <nav>
                 <ul class="main-nav">
-                    <li><a href="#" class="nav-link font-link active">About the shelter</a></li>
+                    <li><a href="#" class="nav-link font-link link_active">About the shelter</a></li>
                     <li><a href="../pets/index.html" class="nav-link font-link">Our pets</a></li>
                     <li><a href="#help" class="nav-link font-link">Help the shelter</a></li>
                     <li><a href="#contacts" class="nav-link font-link">Contacts</a></li>
@@ -30,12 +30,12 @@
         </header>
 
         <section class="wrapper start-screen">
-            <div class="start-screen-content">
+            <div class="start-screen__content">
                 <h2 class="start-screen-title">Not only people need a house</h2>
                 <p class="font-text">We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will love you more than anybody else in the world, you will see!</p>
                 <button class="btn make-friend-btn"><a class="btn-link" href="#our_pets">Make a friend</a></button>
             </div>
-            <div class="start-screen-image">
+            <div class="start-screen__image">
                 <img src="../../assets/images/start_screen_puppy.png" width="698px" height="728px" alt="cute puppy">
             </div>
         </section>
@@ -55,37 +55,39 @@
     <section class="pets" id="our_pets">
         <div class="wrapper">
             <h3 class="font-title">Our friends who are&nbsp;looking for a house</h3>
-            <div class="slider-wrapper">
-                <div class="pets-slider">
-                    <div class="card">
-                        <img src="../../assets/images/pets_katrine.png" alt="gray Chartreux breed cat">
-                        <p class="font-title pets-title">Katrine</p>
-                        <button class="btn">Learn more</button>
-                    </div>
+                <div class="slider-container">
+                    <button class="arrow-btn arrow-back">
+                        <svg width="14" height="6" viewBox="0 0 14 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14 2V4H3V6L0 3L3 0V2H14Z" fill="#292929"/>
+                        </svg>                        
+                    </button>
 
-                    <div class="card">
-                        <img src="../../assets/images/pets_jennifer.png" alt="little Labrador puppy">
-                        <p class="font-title pets-title">Jennifer</p>
-                        <button class="btn">Learn more</button>
-                    </div>
+                    <div class="pets-slider">
+                        <div class="card">
+                            <img src="../../assets/images/pets_katrine.png" alt="gray Chartreux breed cat">
+                            <p class="font-title pets-title">Katrine</p>
+                            <button class="btn">Learn more</button>
+                        </div>
 
-                    <div class="card">
-                        <img src="../../assets/images/pets_woody.png" alt="grown up Golden Retriever">
-                        <p class="font-title pets-title">Woody</p>
-                        <button class="btn">Learn more</button>
+                        <div class="card">
+                            <img src="../../assets/images/pets_jennifer.png" alt="little Labrador puppy">
+                            <p class="font-title pets-title">Jennifer</p>
+                            <button class="btn">Learn more</button>
+                        </div>
+
+                        <div class="card">
+                            <img src="../../assets/images/pets_woody.png" alt="grown up Golden Retriever">
+                            <p class="font-title pets-title">Woody</p>
+                            <button class="btn">Learn more</button>
+                        </div>
                     </div>
+               
+                    <button class="arrow-btn arrow-forward">
+                        <svg width="14" height="6" viewBox="0 0 14 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 4V2L11 2V0L14 3L11 6V4L0 4Z" fill="#292929"/>
+                        </svg>
+                    </button>
                 </div>
-                <button class="arrow-btn back">
-                    <svg width="14" height="6" viewBox="0 0 14 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M14 2V4H3V6L0 3L3 0V2H14Z" fill="#292929"/>
-                    </svg>                        
-                </button>
-                <button class="arrow-btn forward">
-                    <svg width="14" height="6" viewBox="0 0 14 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 4V2L11 2V0L14 3L11 6V4L0 4Z" fill="#292929"/>
-                    </svg>
-                </button>
-            </div>
             <button class="btn open-all-btn"><a class="btn-link" href="../pets/index.html">Get to know the rest</a></button>
         </div>     
     </section>
@@ -150,10 +152,10 @@
         </div>
         </section>
         
-    <footer id="contacts">
-        <div class="wrapper footer-grid">
-            <div class="footer-column contact-column">
-                <h3 class="font-title">For questions and suggestions</h3>
+    <footer class="footer" id="contacts">
+        <div class="wrapper footer-container">
+            <div class="footer-column">
+                <h3 class="font-title">For questions and&nbsp;suggestions</h3>
                 <div class="contact-item">
                     <img src="../../assets/icons/icon_email.svg" alt="email">                  
                     <a class="font-title address" href="mailto:email@shelter.com">email@shelter.com</a>
@@ -164,7 +166,7 @@
                 </div>
             </div>
             <div class="footer-column">
-                <h3 class="font-title">We are waiting for your visit</h3>
+                <h3 class="font-title">We are waiting for&nbsp;your visit</h3>
                 <div class="contact-item">
                     <img src="../../assets/icons/icon_marker.svg" alt="address">
                     <a href="https://www.google.com/maps/place/1+Centre+St,+Boston,+MA+02130,+%D0%A1%D0%A8%D0%90/@42.3227448,-71.1019048,17z/data=!3m1!4b1!4m5!3m4!1s0x89e379804904c2e1:0xf2288376436c7143!8m2!3d42.3227448!4d-71.0997161" target="_blank" class="font-title address">1 Central Street, Boston (entrance from the store)</a>
