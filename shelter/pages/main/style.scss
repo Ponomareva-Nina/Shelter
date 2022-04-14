@@ -53,6 +53,10 @@ $btn-hover-color: #FDDCC4;
 }
 
 //default
+body {
+    margin: 0;
+}
+
 h1, h2, h3, p {
     margin: 0;
     padding: 0;
@@ -70,10 +74,10 @@ a {
 
 //common wrappers
 .wrapper {
-    max-width: 1220px;
+    max-width: 1260px;
     box-sizing: border-box;
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 0 30px;
 }
 
 // common button styles
@@ -154,14 +158,14 @@ a {
     background: URL("../../assets/images/noise_transparent.png"), 
     linear-gradient(to right, #49372a 0%, #1A1A1C 50%, #211F20 100%);
     height: 908px;
+    overflow: hidden;
 }
 .start-screen {
     display: flex;
-    overflow: hidden;
+    justify-content: space-between;
 }
 .start-screen__content {
     max-width: 460px;
-    margin-right: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -173,7 +177,7 @@ a {
 }
 .start-screen__image {
     margin-top: 60px;
-    align-content: flex-end;
+ 
 }
 .start-screen-title {
     font-family: "Georgia";
@@ -415,4 +419,29 @@ a {
 }
 .footer-image {
     padding-top: 40px;
+}
+
+@media only screen and (max-width: 1279px) and (min-width: 768px) {
+    .header {
+        padding: 30px 30px 0;
+    }
+    .start-screen-wrapper {
+        height: 1165px;
+    }
+    .start-screen {
+       flex-direction: column;
+       align-items: center;
+       margin-top: 60px;
+    }
+    .start-screen__image {
+        align-self: flex-end;
+        margin-top: 100px;
+
+        img {
+            width: 569px;
+        }
+    }
+    .make-friend-btn{
+        margin: 0 auto;
+    } 
 }
