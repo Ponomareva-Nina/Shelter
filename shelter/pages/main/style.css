@@ -270,9 +270,10 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 52px;
 }
 
 .pets-slider {
@@ -390,7 +391,7 @@ a {
   row-gap: 55px;
   -webkit-column-gap: 120px;
           column-gap: 120px;
-  max-width: 1026px;
+  margin: 0 110px;
 }
 
 .item {
@@ -414,7 +415,7 @@ a {
   font-size: 20px;
   line-height: 115%;
   color: #545454;
-  letter-spacing: 0.055em;
+  letter-spacing: 0.06em;
 }
 
 .donation {
@@ -488,16 +489,17 @@ a {
 }
 
 .footer-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 278px 302px 300px;
+      grid-template-columns: 278px 302px 300px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 160px;
 }
 
 .footer-column {
-  width: 25%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -515,7 +517,7 @@ a {
 }
 
 .footer-column:nth-child(2) {
-  width: 27%;
+  width: 302px;
 }
 
 .contact-item {
@@ -565,6 +567,74 @@ a {
   }
   .make-friend-btn {
     margin: 0 auto;
+  }
+  .about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 80px;
+  }
+  .slider-container {
+    gap: 12px;
+  }
+  .pets-slider {
+    -ms-grid-columns: (270px)[2];
+        grid-template-columns: repeat(2, 270px);
+    grid-auto-rows: auto 0;
+    -webkit-column-gap: 40px;
+            column-gap: 40px;
+    overflow: hidden;
+  }
+  .help-list {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -webkit-column-gap: 60px;
+            column-gap: 60px;
+  }
+  .help-list .item {
+    width: 170px;
+  }
+  .donation {
+    padding-bottom: 95px;
+  }
+  .donation-inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    gap: 60px;
+  }
+  .footer {
+    height: 610px;
+    overflow: hidden;
+    padding-top: 30px;
+    padding-bottom: 0;
+  }
+  .footer-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 278px 302px;
+        grid-template-columns: 278px 302px;
+    -ms-grid-rows: 234px 310px;
+        grid-template-rows: 234px 310px;
+    -webkit-column-gap: 60px;
+            column-gap: 60px;
+    row-gap: 65px;
+  }
+  .footer-image {
+    grid-column: span 2;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    padding: 0;
+  }
+  .footer-column {
+    padding: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
