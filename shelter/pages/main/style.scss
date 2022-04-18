@@ -10,6 +10,7 @@ $colored-btn-color: #F1CDB3;
 $btn-border-color: #F1CDB3;
 $btn-hover-color: #FDDCC4;
 
+$header-font-mobile: 25px;
 
 // fonts
 @font-face {
@@ -85,6 +86,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: 15px 43px;
     border-radius: 100px;
 
@@ -157,7 +159,7 @@ a {
 .start-screen-wrapper {
     background: URL("../../assets/images/noise_transparent.png"), 
     linear-gradient(to right, #49372a 0%, #1A1A1C 50%, #211F20 100%);
-    height: 908px;
+    max-height: 908px;
     overflow: hidden;
 }
 .start-screen {
@@ -218,6 +220,9 @@ a {
     flex-direction: column;
     justify-content: center;
     row-gap: 25px;
+    p {
+        color: #4C4C4C;
+    }
 }
 
 // SECTION OUR PETS
@@ -234,23 +239,21 @@ a {
         margin-right: auto;
     }
 }
-.slider-container {
+.pets-slider {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 52px;
 }
-.pets-slider {
-    display: grid;
-    grid-template-columns: repeat(3, 270px);
-    column-gap: 90px;
-    justify-content: center;
+.slider-container {
+    overflow: hidden;
 }
-.pets-title {
-    font-size: 20px;
-    line-height: 23px;
+.slider-track {
+    display: flex;
+    gap: 90px;
+    transition: 0.2s;
 }
 .card {
+    min-width: 270px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -277,6 +280,10 @@ a {
         margin-bottom: 30px;
     }
 }
+.pets-title {
+    font-size: 20px;
+    line-height: 23px;
+}
 .open-all-btn {
     width: 261px;
     height: 52px;
@@ -288,8 +295,8 @@ a {
     margin-right: auto;
 }
 .arrow-btn {
-    width: 52px;
-    height: 52px;
+    min-width: 52px;
+    min-height: 52px;
     color: #292929;
     border: 2px solid #F1CDB3;
     background-color: $pets-section-bg-color;
@@ -424,7 +431,7 @@ a {
         padding: 30px 30px 0;
     }
     .start-screen-wrapper {
-        height: 1165px;
+        max-height: 1165px;
     }
     .start-screen {
        flex-direction: column;
@@ -447,14 +454,15 @@ a {
         align-items: center;
         gap: 80px;
     }
-    .slider-container {
+    .pets-slider {
         gap: 12px;
     }
-    .pets-slider {
-        grid-template-columns: repeat(2, 270px);
-        grid-auto-rows: auto 0;
-        column-gap: 40px;
-        overflow: hidden;
+    .slider-container {
+        min-width: 580px;
+        max-width: 580px;
+    }
+    .slider-track {
+        gap: 40px;
     }
 
     .help-list {
@@ -496,5 +504,90 @@ a {
     }
     .footer-column {
         padding: 0;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .wrapper {
+        padding: 0 10px;
+    }
+    .main-nav {
+        display: none;
+    }
+    .header { 
+        padding-top: 30px;  
+    }
+    .start-screen-wrapper {
+        max-height: 823px;
+    }
+    .start-screen {
+        flex-direction: column;
+        align-items: center;
+    }
+    .start-screen__content {
+        margin-top: 60px;
+        align-items: center;
+        text-align: center;
+    }
+    .start-screen-title {
+        font-size: $header-font-mobile;
+        letter-spacing: 0.06em;
+    }
+    .start-screen__image {
+        align-self: flex-end;
+        margin-top: 80px;
+        
+        img {
+            max-width: 260px;
+            vertical-align: bottom;
+        }
+    }
+    .about {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 42px;
+        padding: 42px 25px;
+    }
+    .about-content {
+        text-align: justify;
+        row-gap: 22px;
+
+        .about__header {
+            text-align: center;
+            font-size: $header-font-mobile;
+            margin-bottom: 3px;
+        }
+    }
+    .about-image img {
+        width: 260px;
+        height: auto;
+        vertical-align: bottom;
+    }
+    .pets {
+        padding: 42px 0;
+        h3 {
+            font-size: $header-font-mobile; 
+            margin-bottom: 42px;  
+        }
+    }
+    .pets-slider {
+        position: relative;
+    }
+    .slider-container {
+        min-width: 270px;
+        max-width: 270px;
+    }
+    .arrow-back {
+        position: absolute;
+        bottom: -72px;
+        left: calc(50% - 90px);
+    }
+    .arrow-forward {
+        position: absolute;
+        bottom: -72px;
+        right: calc(50% - 90px);
+    }
+    .open-all-btn {
+        margin-top: 114px;
     }
 }
