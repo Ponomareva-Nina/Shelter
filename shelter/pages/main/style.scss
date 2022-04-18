@@ -158,8 +158,7 @@ a {
 
 .start-screen-wrapper {
     background: URL("../../assets/images/noise_transparent.png"), 
-    linear-gradient(to right, #49372a 0%, #1A1A1C 50%, #211F20 100%);
-    max-height: 908px;
+    linear-gradient(to right, #49372a 0%, #1A1A1C 60%, #211F20 100%);
     overflow: hidden;
 }
 .start-screen {
@@ -179,7 +178,9 @@ a {
 }
 .start-screen__image {
     margin-top: 60px;
- 
+}
+.start-screen__image img {
+    vertical-align: bottom;
 }
 .start-screen-title {
     font-family: "Georgia";
@@ -243,6 +244,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    column-gap: 53px;
 }
 .slider-container {
     overflow: hidden;
@@ -257,10 +259,14 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    height: 435px;
+    justify-content: center;
+    row-gap: 30px;
     background-color: $card-background-color;
     border-radius: 9px;
+
+    img {
+        vertical-align: bottom;
+    }
 
     &:hover {
         cursor: pointer;
@@ -313,17 +319,16 @@ a {
 // SECTION HELP
 
 .help {
-    padding: 80px 0 100px;
+    padding: 80px 30px 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    h3 {
-        max-width: 310px;
-        text-align: center;
-        margin-bottom: 60px;
-    }
+}
+.help__header {
+    max-width: 310px;
+    text-align: center;
+    margin-bottom: 60px;
 }
 .help-list {
     display: flex;
@@ -345,6 +350,7 @@ a {
         line-height: 115%;
         color: $title-color;
         letter-spacing: 0.06em;
+        text-align: center;
     }
 }
 
@@ -360,6 +366,9 @@ a {
     justify-content: center;
     align-items: center;
     gap: 30px;
+}
+.donation-image img {
+    vertical-align: bottom;
 }
 .donation-content {
     max-width: 380px;
@@ -381,28 +390,30 @@ a {
     padding: 10px 15px;
     width: max-content;
 
-    a {
-        font-size: 20px;
-        line-height: 115%;
+    &:hover {
+        background-color: $btn-hover-color;
     }
+}
+.card-number__link {
+    font-size: 20px;
+    line-height: 115%;
 }
 
 // FOOTER
 
 .footer {
-    background: URL("../../assets/images/noise_transparent.png"), 
-    linear-gradient(to right, #49372a 0%, #1A1A1C 50%, #211F20 100%);
-    height: 350px;
+    background: URL("../../assets/images/noise_transparent.png"),
+    linear-gradient(to right, #49372a 0%, #1A1A1C 70%, #211F20 100%);
+}
+.footer-title {
+    color: #FFFFFF;
 
-    .font-title {
-        color: #FFFFFF;
-    }
 }
 .footer-container {
     display: grid;
-    grid-template-columns: 278px 302px 300px;
+    grid-template-columns: 279px 302px 300px;
     justify-content: center;
-    gap: 160px;
+    column-gap: 160px;
 }
 .footer-column {
     display: flex;
@@ -424,6 +435,7 @@ a {
 }
 .footer-image {
     padding-top: 40px;
+    vertical-align: bottom;
 }
 
 @media only screen and (max-width: 1279px) and (min-width: 768px) {
@@ -475,10 +487,6 @@ a {
         }
     }
 
-    .donation {
-        padding-bottom: 95px;
-    }
-
     .donation-inner {
        flex-direction: column-reverse;
        gap: 60px;
@@ -492,7 +500,7 @@ a {
     }
     .footer-container {
         display: grid;
-        grid-template-columns: 278px 302px;
+        grid-template-columns: 279px 302px;
         grid-template-rows: 234px 310px;
         column-gap: 60px;
         row-gap: 65px;
@@ -516,9 +524,6 @@ a {
     }
     .header { 
         padding-top: 30px;  
-    }
-    .start-screen-wrapper {
-        max-height: 823px;
     }
     .start-screen {
         flex-direction: column;
@@ -589,5 +594,82 @@ a {
     }
     .open-all-btn {
         margin-top: 114px;
+    }
+    .help {
+        padding: 42px 10px;
+    }
+    .help__header {
+        font-size: $header-font-mobile;
+    }
+    .help-list {
+        display: grid;
+        grid-template-columns: repeat(2, 130px);
+        gap: 30px;
+
+        .item img{
+            max-width: 50px;
+            max-height: 50px;
+        }
+
+        .item p {
+            font-size: 15px;
+            margin-top: 20px;
+        }
+    }
+    .help__header {
+        margin-bottom: 42px;
+    }
+    .donation {
+        padding: 42px 20px; 
+    }
+    .donation-inner{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 42px;
+    }
+    .donation-content {
+        justify-content: center;
+        align-items: center;
+    }
+    .donation__header {
+        font-size: $header-font-mobile;
+        text-align: center;
+    }
+    .font-remark {
+        size: 12px;
+        text-align: justify;
+    }
+    .donation-image img {
+        max-width: 260px;
+    }
+    .card-number__link {
+        font-size: 15px;
+    }
+    .bank-account {
+        letter-spacing: normal;
+    }
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 30px 10px 0;
+    }
+    .footer-column {
+        max-width: 300px;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+        gap: 40px;
+    }
+    .footer-title{
+        font-size: 25px;
+    }
+    .footer-image img {
+        width: 260px;
+    }
+    .footer-image {
+        padding-top: 0;
     }
 }
