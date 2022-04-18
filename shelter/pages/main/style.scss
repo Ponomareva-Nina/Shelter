@@ -407,18 +407,13 @@ a {
 .footer-column:nth-child(2){
     width: 302px;
 }
-
 .contact-item {
     display: flex;
     gap: 20px;
     align-items: center;
-
-
-    .address {
-        font-size: 20px;
-        line-height: 115%;
-        color: #F1CDB3;
-    }
+    font-size: 20px;
+    line-height: 115%;
+    color: #F1CDB3;
 }
 .footer-image {
     padding-top: 40px;

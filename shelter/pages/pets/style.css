@@ -150,7 +150,7 @@ a {
           column-gap: 40px;
   row-gap: 30px;
   margin-top: 60px;
-  margin-bottom: 15px;
+  padding-bottom: 15px;
 }
 
 .btn {
@@ -337,9 +337,6 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.contact-item .address {
   font-size: 20px;
   line-height: 115%;
   color: #F1CDB3;
@@ -359,7 +356,7 @@ a {
     grid-auto-rows: auto auto auto 0;
     overflow: hidden;
     margin-top: 30px;
-    margin-bottom: 0;
+    padding-bottom: 0;
   }
   .pagination-panel {
     display: -webkit-box;
