@@ -43,6 +43,11 @@ $disabled: #CDCDCD;
 }
 
 //default 
+body {
+    margin: 0;
+    padding: 0;
+}
+
 h1, h2, h3, p {
     margin: 0;
     padding: 0;
@@ -59,8 +64,9 @@ a {
 }
 
 .wrapper {
-    max-width: 1200px;
+    max-width: 1260px;
     box-sizing: border-box;
+    padding: 0 30px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -98,7 +104,6 @@ a {
     letter-spacing: 0.1em;
     color: #292929;
 }
-
 .main-nav {
     display: flex;
     margin-top: 15px;
@@ -122,7 +127,6 @@ a {
     padding-top: 80px;
     padding-bottom: 100px;
 }
-
 .pets-header{
     text-align: center;
     margin-left: auto;
@@ -130,27 +134,27 @@ a {
     max-width: 400px;
     
 }
-
 .pets-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 270px);
+    justify-content: center;
     column-gap: 40px;
     row-gap: 30px;
     margin-top: 60px;
-    padding-bottom: 15px; 
+    margin-bottom: 15px; 
 }
-
 .btn {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 15px 43px;
+    padding: 12px 43px;
     border-radius: 100px;
 
     font-family: "Georgia", serif; 
     font-weight: 400;
     font-size: 17px;
-    line-height: 22px;
+    line-height: 130%;
     letter-spacing: 0.05em;
     color: #292929;
 
@@ -159,18 +163,7 @@ a {
         background-color: $btn-hover-color;
     }
 }
-
-.pets-slider {
-    display: grid;
-    grid-template-columns: repeat(3, 270px);
-    column-gap: 90px;
-    justify-content: center;
-}
-.pet-name {
-    font-size: 20px;
-    line-height: 23px;
-}
-.card {
+.pet-card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -197,6 +190,10 @@ a {
         margin-bottom: 30px;
     }
 }
+.pet-name {
+    font-size: 20px;
+    line-height: 23px;
+}
 .pagination-panel {
     display: flex;
     max-width: 340px;
@@ -204,8 +201,29 @@ a {
     margin-right: auto;
     margin-top: 45px;
     justify-content: space-between;
-    font-size: 20px;
-    letter-spacing: 0.06em;
+    align-items: center;
+    
+    .slide-btn {
+        width: 52px;
+        height: 52px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #F1CDB3;
+        box-sizing: border-box;
+        border-radius: 100px;
+        background-color: $pets-section-bg-color;
+        font-size: 20px; 
+        letter-spacing: 0.06em;
+        font-family: "Georgia"; 
+        font-weight: 400;
+        color: #292929;
+
+        &:hover {
+            background-color: $btn-hover-color;
+            cursor: pointer;
+        }
+    }
 
     .current {
         background-color: $btn-hover-color;
@@ -227,28 +245,9 @@ a {
         }
     }
 }
-.slide-btn {
-    width: 52px;
-    height: 52px;
-    color: #292929;
-    border: 2px solid #F1CDB3;
-    box-sizing: border-box;
-    border-radius: 100px;
-    background-color: $pets-section-bg-color;
 
-    font-family: "Georgia"; 
-    font-weight: 400;
-    font-size: 20px; 
-    line-height: 115%;
-    letter-spacing: 0.06em;
 
-    &:hover {
-        background-color: $btn-hover-color;
-        cursor: pointer;
-    }
-}
-
-// FOOTER 
+// FOOTER
 
 .footer {
     background: URL("../../assets/images/noise_transparent.png"), 
@@ -260,19 +259,20 @@ a {
     }
 }
 .footer-container {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 278px 302px 300px;
+    justify-content: center;
+    gap: 160px;
 }
 .footer-column {
-    width: 25%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
     padding: 56px 0 60px;
 }
-.footer-column:nth-child(2) {
-    width: 27%;
+.footer-column:nth-child(2){
+    width: 302px;
 }
 
 .contact-item {
@@ -289,4 +289,43 @@ a {
 }
 .footer-image {
     padding-top: 40px;
+}
+
+@media only screen and (max-width: 1279px) and (min-width: 768px) {
+    .pets {
+        padding-bottom: 75px;
+    }
+    .pets-grid {
+        grid-template-columns: repeat(2, 270px); 
+        grid-auto-rows: auto auto auto 0;
+        overflow: hidden;
+        margin-top: 30px;
+        margin-bottom: 0; 
+    }
+    .pagination-panel {
+        display: flex;
+        margin-top: 10px;
+    }
+    
+    .footer {
+        height: 610px;
+        overflow: hidden;
+        padding-top: 30px;
+        padding-bottom: 0;
+    }
+    .footer-container {
+        display: grid;
+        grid-template-columns: 278px 302px;
+        grid-template-rows: 234px 310px;
+        column-gap: 60px;
+        row-gap: 65px;
+    }
+    .footer-image {
+        grid-column: span 2;
+        justify-self: center;
+        padding: 0;
+    }
+    .footer-column {
+        padding: 0;
+    }
 }
