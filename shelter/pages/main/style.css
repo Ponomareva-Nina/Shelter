@@ -849,8 +849,6 @@ a {
   }
   .burger-button {
     display: block;
-  }
-  .burger-button {
     background-color: transparent;
     border: none;
     position: absolute;
