@@ -161,6 +161,10 @@ a {
   border-bottom: 3px solid #F1CDB3;
 }
 
+.burger-button {
+  display: none;
+}
+
 .start-screen-wrapper {
   background: URL("../../assets/images/noise_transparent.png"), -webkit-gradient(linear, left top, right top, from(#49372a), color-stop(60%, #1A1A1C), to(#211F20));
   background: URL("../../assets/images/noise_transparent.png"), linear-gradient(to right, #49372a 0%, #1A1A1C 60%, #211F20 100%);
@@ -562,10 +566,6 @@ a {
 .footer-image {
   padding-top: 40px;
   vertical-align: bottom;
-}
-
-.burger-button {
-  display: none;
 }
 
 @media only screen and (max-width: 1279px) and (min-width: 768px) {
