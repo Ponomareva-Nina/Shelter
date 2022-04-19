@@ -59,7 +59,7 @@ a {
   margin-right: auto;
 }
 
-.header {
+.header_wrapper {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -68,6 +68,10 @@ a {
   height: -moz-fit-content;
   height: fit-content;
   background-color: #FFFFFF;
+}
+
+.header_inner {
+  max-width: 1220px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -75,6 +79,7 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 30px;
+  margin: 0 auto;
 }
 
 .logo {
@@ -403,6 +408,12 @@ a {
   .wrapper {
     padding: 0 10px;
   }
+  .header_inner {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 30px 10px;
+  }
   .main-nav {
     display: none;
   }
@@ -470,8 +481,8 @@ a {
     background-color: transparent;
     border: none;
     position: absolute;
-    top: 45px;
-    right: 53px;
+    top: 48px;
+    right: 50px;
   }
   .burger-button:hover {
     cursor: pointer;
