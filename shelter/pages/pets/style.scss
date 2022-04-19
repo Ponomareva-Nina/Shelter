@@ -285,6 +285,10 @@ a {
     padding-top: 40px;
 }
 
+.burger-button {
+    display: none;
+}
+
 @media only screen and (max-width: 1279px) and (min-width: 768px) {
     .pets {
         padding-bottom: 75px;
@@ -329,9 +333,6 @@ a {
     .main-nav {
         display: none;
     }
-    .header { 
-        padding-top: 30px;  
-    }
     .pets {
         padding: 42px 10px;
     }
@@ -375,5 +376,22 @@ a {
     }
     .footer-image {
         padding-top: 0;
+    }
+
+    //MOBILE NAVIGATION
+    .burger-button {
+        display: block;
+    }
+
+    .burger-button {
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        top: 45px;
+        right: 53px;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 }
