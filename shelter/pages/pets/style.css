@@ -71,14 +71,14 @@ a {
 }
 
 .header_inner {
-  max-width: 1220px;
+  max-width: 1200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 30px;
+  padding: 30px 40px;
   margin: 0 auto;
 }
 
@@ -361,6 +361,9 @@ a {
 }
 
 @media only screen and (max-width: 1279px) and (min-width: 768px) {
+  .header_inner {
+    padding: 30px;
+  }
   .pets {
     padding-bottom: 75px;
   }
@@ -409,9 +412,6 @@ a {
     padding: 0 10px;
   }
   .header_inner {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     padding: 30px 10px;
   }
   .main-nav {
