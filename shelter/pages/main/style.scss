@@ -114,6 +114,9 @@ a {
     flex-direction: column;
     align-items: center;
 }
+.burger-logo {
+    display: none;
+}
 .logo-title {
     font-family: "Georgia", serif; 
     font-weight: 400;
@@ -673,21 +676,77 @@ a {
     .footer-image {
         padding-top: 0;
     }
-    .main-nav {
-        display: none;
-    }
 
-    //MOBILE NAVIGATION
+    //BURGER MENU 
     .burger-button {
         display: block;
         background-color: transparent;
         border: none;
         position: absolute;
         top: 45px;
-        right: 53px;
+        right: 50px;
+        z-index: 5;
 
         &:hover {
             cursor: pointer;
         }
+
+        &_active {
+            transform: rotate(-180deg);
+        }
+    }
+    .burger-logo {
+        display: block;
+        position: fixed;
+        top: 30px;
+        z-index: 5;
+    }
+    .navigation-panel {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 320px;
+        box-sizing: border-box;
+        height: 100vh;
+        background: #292929;
+        padding: 30px 10px;
+        transition: right 0.3s ease 0s;
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+        
+        &::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 320px;
+            height: 120px;
+            background-color: #292929;
+            z-index: 4;
+            transition: right 0.3s ease 0s;
+        }
+    }
+    .navigation-panel_active {
+        right: 0;
+
+        &::before {
+            right: 0;
+        }
+    }
+    .main-nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        margin: 30% auto 70%;
+
+        .nav-link {
+            margin: 0;
+            font-size: 32px;
+        }
+    }
+
+    .no-scroll {
+        overflow-y: hidden;
     }
 }
