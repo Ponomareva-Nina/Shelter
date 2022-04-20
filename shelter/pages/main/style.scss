@@ -686,13 +686,14 @@ a {
         top: 45px;
         right: 50px;
         z-index: 5;
+        transition: .3s;
 
         &:hover {
             cursor: pointer;
         }
 
         &_active {
-            transform: rotate(-180deg);
+            transform: rotate(-90deg);
         }
     }
     .burger-logo {
@@ -714,6 +715,7 @@ a {
         display: flex;
         flex-direction: column;
         overflow: auto;
+        z-index: 3;
         
         &::before {
             content: "";
@@ -749,4 +751,17 @@ a {
     .no-scroll {
         overflow-y: hidden;
     }
+
+    //затемнение 
+    .header_active::after {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vh;
+        height: 100vh;
+        background-color: rgba(41, 41, 41, 0.6);
+        z-index: 1;
+    }
+    // --------------------
 }

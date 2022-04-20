@@ -855,13 +855,15 @@ a {
     top: 45px;
     right: 50px;
     z-index: 5;
+    -webkit-transition: .3s;
+    transition: .3s;
   }
   .burger-button:hover {
     cursor: pointer;
   }
   .burger-button_active {
-    -webkit-transform: rotate(-180deg);
-            transform: rotate(-180deg);
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
   }
   .burger-logo {
     display: block;
@@ -889,6 +891,7 @@ a {
         -ms-flex-direction: column;
             flex-direction: column;
     overflow: auto;
+    z-index: 3;
   }
   .navigation-panel::before {
     content: "";
@@ -925,6 +928,16 @@ a {
   }
   .no-scroll {
     overflow-y: hidden;
+  }
+  .header_active::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vh;
+    height: 100vh;
+    background-color: rgba(41, 41, 41, 0.6);
+    z-index: 1;
   }
 }
 /*# sourceMappingURL=style.css.map */
