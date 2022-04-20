@@ -87,7 +87,7 @@ a {
     padding: 30px 40px;
     margin: 0 auto;
 }
-.logo {
+.header__logo {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -111,6 +111,9 @@ a {
     line-height: 15px;
     letter-spacing: 0.1em;
     color: #292929;
+}
+.burger-logo {
+    display: none;
 }
 .main-nav {
     display: flex;
@@ -345,9 +348,6 @@ a {
     .header_inner {
         padding: 30px 10px;
     }
-    .main-nav {
-        display: none;
-    }
     .pets {
         padding: 42px 10px;
     }
@@ -393,20 +393,90 @@ a {
         padding-top: 0;
     }
 
-    //MOBILE NAVIGATION
+    //BURGER MENU 
     .burger-button {
         display: block;
-    }
-
-    .burger-button {
         background-color: transparent;
         border: none;
         position: absolute;
-        top: 48px;
+        top: 45px;
         right: 50px;
+        z-index: 5;
+        transition: .3s;
 
         &:hover {
             cursor: pointer;
         }
+
+        &_active {
+            transform: rotate(-90deg);
+        }
+    }
+    .burger-logo {
+        display: block;
+        position: fixed;
+        top: 30px;
+        z-index: 5;
+    }
+    .navigation-panel {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 320px;
+        box-sizing: border-box;
+        height: 100vh;
+        background: #FFFFFF;
+        padding: 30px 10px;
+        transition: right 0.3s ease 0s;
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+        z-index: 3;
+        
+        &::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 320px;
+            height: 120px;
+            background-color: #FFFFFF;
+            z-index: 4;
+            transition: right 0.3s ease 0s;
+        }
+    }
+    .navigation-panel_active {
+        right: 0;
+
+        &::before {
+            right: 0;
+        }
+    }
+    .main-nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        margin: 100px auto auto;
+
+        .nav-link {
+            margin: 0;
+            font-size: 32px;
+        }
+    }
+
+    .no-scroll {
+        overflow-y: hidden;
+    }
+
+    //затемнение 
+    .header_active::after {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vh;
+        height: 100vh;
+        background-color: rgba(41, 41, 41, 0.6);
+        z-index: 1;
     }
 }

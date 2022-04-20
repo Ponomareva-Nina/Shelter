@@ -82,7 +82,7 @@ a {
   margin: 0 auto;
 }
 
-.logo {
+.header__logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -115,6 +115,10 @@ a {
   line-height: 15px;
   letter-spacing: 0.1em;
   color: #292929;
+}
+
+.burger-logo {
+  display: none;
 }
 
 .main-nav {
@@ -414,9 +418,6 @@ a {
   .header_inner {
     padding: 30px 10px;
   }
-  .main-nav {
-    display: none;
-  }
   .pets {
     padding: 42px 10px;
   }
@@ -476,16 +477,95 @@ a {
   }
   .burger-button {
     display: block;
-  }
-  .burger-button {
     background-color: transparent;
     border: none;
     position: absolute;
-    top: 48px;
+    top: 45px;
     right: 50px;
+    z-index: 5;
+    -webkit-transition: .3s;
+    transition: .3s;
   }
   .burger-button:hover {
     cursor: pointer;
+  }
+  .burger-button_active {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+  .burger-logo {
+    display: block;
+    position: fixed;
+    top: 30px;
+    z-index: 5;
+  }
+  .navigation-panel {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 320px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    height: 100vh;
+    background: #FFFFFF;
+    padding: 30px 10px;
+    -webkit-transition: right 0.3s ease 0s;
+    transition: right 0.3s ease 0s;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    overflow: auto;
+    z-index: 3;
+  }
+  .navigation-panel::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 320px;
+    height: 120px;
+    background-color: #FFFFFF;
+    z-index: 4;
+    -webkit-transition: right 0.3s ease 0s;
+    transition: right 0.3s ease 0s;
+  }
+  .navigation-panel_active {
+    right: 0;
+  }
+  .navigation-panel_active::before {
+    right: 0;
+  }
+  .main-nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 40px;
+    margin: 100px auto auto;
+  }
+  .main-nav .nav-link {
+    margin: 0;
+    font-size: 32px;
+  }
+  .no-scroll {
+    overflow-y: hidden;
+  }
+  .header_active::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vh;
+    height: 100vh;
+    background-color: rgba(41, 41, 41, 0.6);
+    z-index: 1;
   }
 }
 /*# sourceMappingURL=style.css.map */

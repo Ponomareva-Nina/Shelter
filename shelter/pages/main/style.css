@@ -920,7 +920,7 @@ a {
         -ms-flex-align: center;
             align-items: center;
     gap: 40px;
-    margin: 30% auto 70%;
+    margin: 100px auto auto;
   }
   .main-nav .nav-link {
     margin: 0;
