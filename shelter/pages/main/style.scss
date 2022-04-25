@@ -451,6 +451,27 @@ a {
     vertical-align: bottom;
 }
 
+// === CAROUSEL ANIMATION ===
+@keyframes move-left {
+    from {left: -1080px}
+    to {left: 0px}
+}
+
+.transition-left {
+    animation-name: move-left;
+    animation-duration: 1s;
+}
+
+@keyframes move-right {
+    from {left: -1080px}
+    to {left: -2160px}
+}
+
+.transition-right {
+    animation-name: move-right;
+    animation-duration: 1s;
+}
+// === /CAROUSEL ANIMATION ===
 
 //MEDIA QUERIES:
 
@@ -485,11 +506,20 @@ a {
     .slider-container {
         min-width: 580px;
         max-width: 580px;
+        gap: 40px;
     }
     .slider-track {
         gap: 40px;
+        left: -620px;
     }
+    .items {
+        display: flex;
+        gap: 40px;
 
+        .card:last-child {
+            display: none;
+        }
+    }
     .help-list {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -526,6 +556,17 @@ a {
     .footer-column {
         padding: 0;
     }
+
+    @keyframes move-left {
+        from {left: -620px}
+        to {left: 0px}
+    }
+
+    @keyframes move-right {
+        from {left: -620px}
+        to {left: -1240px}
+    }
+ 
 }
 
 
@@ -593,6 +634,32 @@ a {
         min-width: 270px;
         max-width: 270px;
     }
+    .slider-track {
+        gap: 40px;
+        left: -310px;
+    }
+    .items {
+        display: flex;
+        gap: 40px;
+        
+        .card:nth-child(2) {
+            display: none;
+        }
+        .card:last-child {
+            display: none;
+        }
+    }
+
+    @keyframes move-left {
+        from {left: -310px}
+        to {left: 0px}
+    }
+    
+    @keyframes move-right {
+        from {left: -310px}
+        to {left: -620px}
+    }
+    
     .arrow-back {
         position: absolute;
         bottom: -72px;
@@ -773,24 +840,3 @@ a {
     // --------------------
 }
 
-// === CAROUSEL ANIMATION ===
-@keyframes move-left {
-    from {left: -1080px}
-    to {left: 0px}
-}
-
-.transition-left {
-    animation-name: move-left;
-    animation-duration: 1s;
-}
-
-@keyframes move-right {
-    from {left: -1080px}
-    to {left: -2160px}
-}
-
-.transition-right {
-    animation-name: move-right;
-    animation-duration: 1s;
-}
-// === /CAROUSEL ANIMATION ===

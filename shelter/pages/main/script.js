@@ -135,6 +135,7 @@ const sliderBtnRight = document.querySelector('#btn-right');
 const sliderTrack = document.querySelector('.slider-track');
 let leftItems = document.querySelector('.items-left');
 let rightItems = document.querySelector('.items-right');
+let activeItems = document.querySelector('.items-active');
 
 sliderBtnLeft.addEventListener('click', moveLeft);
 sliderBtnRight.addEventListener('click', moveRight);
@@ -143,27 +144,40 @@ sliderTrack.addEventListener('animationend', (animation) => {
     if (animation.animationName === 'move-left') {
         sliderTrack.classList.remove('transition-left');
         let leftItemsContent = leftItems.innerHTML;
-        document.querySelector('.items-active').innerHTML = leftItemsContent;
+        activeItems.innerHTML = leftItemsContent;
         leftItems.innerHTML = "";
-
-        for (let i = 0; i < 3; i++) {
-            let card = "card" + 'i';
-            card = createCard ();
-            leftItems.appendChild(card);
+        let index = Math.floor(Math.random() * petsArray.length);
+                      
+        if(index < (petsArray.length - 3)){
+            for (let i = index; i < index+3; i++) {
+                let card = createCard(i);
+                leftItems.appendChild(card);
+            }
+        } else {
+            for (let i = index; i > index-3; i--) {
+                let card = createCard(i);
+                leftItems.appendChild(card);
+            }
         }
     } else {
         sliderTrack.classList.remove('transition-right');
         let rightItemsContent = rightItems.innerHTML;
-        document.querySelector('.items-active').innerHTML = rightItemsContent;
+        activeItems.innerHTML = rightItemsContent;
         rightItems.innerHTML = "";
-
-        for (let i = 0; i < 3; i++) {
-            let card = "card" + 'i';
-            card = createCard ();
-            rightItems.appendChild(card);
+        let index = Math.floor(Math.random() * petsArray.length);
+        
+        if(index < (petsArray.length - 3)){
+            for (let i = index; i < index+3; i++) {
+                let card = createCard(i);
+                rightItems.appendChild(card);
+            }
+        } else {
+            for (let i = index; i > index-3; i--) {
+                let card = createCard(i);
+                rightItems.appendChild(card);
+            }
         }
     }
-        
     sliderBtnLeft.addEventListener('click', moveLeft); //(возвращаем слушатель после окончания анимации)
     sliderBtnRight.addEventListener('click', moveRight);
 });
@@ -183,20 +197,22 @@ function moveRight () {
     чтобы пользователь не мог нажимать по стрелке пока не завершилась анимация и не засорялся стек)*/
 };
 
-function createCard () {
+function createCard(i) {
 let card = document.createElement('div');
-let index = Math.floor(Math.random() * 8);
 card.classList.add('card');
+card.classList.add(i);
 card.appendChild(document.createElement('img'))
-card.querySelector('img').src = petsArray[index].img;
+card.querySelector('img').src = petsArray[i].img;
 card.appendChild(document.createElement('p'));
 card.querySelector('p').classList.add('font-title', 'pet-name');
-card.querySelector('.pet-name').innerHTML = petsArray[index].name;
+card.querySelector('.pet-name').innerHTML = petsArray[i].name;
 card.appendChild(document.createElement('button'));
 card.querySelector('button').innerHTML = 'Learn more';
 card.querySelector('button').classList.add('btn');
 return card;
 }
+
+
 // === /SLIDER (CAROUSEL) OF PET CARDS === 
 
 // === PET CARDS POPUP === 
