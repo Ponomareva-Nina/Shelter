@@ -253,12 +253,18 @@ a {
     column-gap: 53px;
 }
 .slider-container {
+    max-width: 990px;
     overflow: hidden;
 }
-.slider-track {
+.slider-track { 
     display: flex;
     gap: 90px;
-    transition: 0.2s;
+    position: relative;
+    left: -1080px;
+}
+.items {
+    display: flex;
+    gap: 90px;
 }
 .card {
     min-width: 270px;
@@ -277,6 +283,7 @@ a {
     &:hover {
         cursor: pointer;
         background-color: $card-hover-bg-color;
+        
 
             .btn {
                 background-color: $btn-hover-color;
@@ -292,7 +299,7 @@ a {
         margin-bottom: 30px;
     }
 }
-.pets-title {
+.pet-name {
     font-size: 20px;
     line-height: 23px;
 }
@@ -765,3 +772,25 @@ a {
     }
     // --------------------
 }
+
+// === CAROUSEL ANIMATION ===
+@keyframes move-left {
+    from {left: -1080px}
+    to {left: 0px}
+}
+
+.transition-left {
+    animation-name: move-left;
+    animation-duration: 1s;
+}
+
+@keyframes move-right {
+    from {left: -1080px}
+    to {left: -2160px}
+}
+
+.transition-right {
+    animation-name: move-right;
+    animation-duration: 1s;
+}
+// === /CAROUSEL ANIMATION ===

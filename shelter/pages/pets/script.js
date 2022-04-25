@@ -6,14 +6,10 @@ const header = document.querySelector('.header');
 let menuLinks = document.querySelectorAll('.nav-link');
 let mainNav = document.querySelector('.main-nav');
 
-burgerButton.addEventListener('click', () => {
-    menuToggle();
-});
+burgerButton.addEventListener('click', menuToggle);
 
 menuLinks.forEach(menuLink => {
-    menuLink.addEventListener('click', () => {
-    closeMenu();
-    });
+    menuLink.addEventListener('click', closeMenu);
 });
 
 window.addEventListener('click', elem => {
@@ -39,3 +35,4 @@ function menuToggle() {
     document.body.classList.toggle('no-scroll');
     header.classList.toggle('header_active');
 };
+

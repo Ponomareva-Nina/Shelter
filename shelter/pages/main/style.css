@@ -296,6 +296,7 @@ a {
 }
 
 .slider-container {
+  max-width: 990px;
   overflow: hidden;
 }
 
@@ -304,8 +305,15 @@ a {
   display: -ms-flexbox;
   display: flex;
   gap: 90px;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  position: relative;
+  left: -1080px;
+}
+
+.items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 90px;
 }
 
 .card {
@@ -349,7 +357,7 @@ a {
   margin-bottom: 30px;
 }
 
-.pets-title {
+.pet-name {
   font-size: 20px;
   line-height: 23px;
 }
@@ -939,5 +947,55 @@ a {
     background-color: rgba(41, 41, 41, 0.6);
     z-index: 1;
   }
+}
+
+@-webkit-keyframes move-left {
+  from {
+    left: -1080px;
+  }
+  to {
+    left: 0px;
+  }
+}
+
+@keyframes move-left {
+  from {
+    left: -1080px;
+  }
+  to {
+    left: 0px;
+  }
+}
+
+.transition-left {
+  -webkit-animation-name: move-left;
+          animation-name: move-left;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+@-webkit-keyframes move-right {
+  from {
+    left: -1080px;
+  }
+  to {
+    left: -2160px;
+  }
+}
+
+@keyframes move-right {
+  from {
+    left: -1080px;
+  }
+  to {
+    left: -2160px;
+  }
+}
+
+.transition-right {
+  -webkit-animation-name: move-right;
+          animation-name: move-right;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 /*# sourceMappingURL=style.css.map */
