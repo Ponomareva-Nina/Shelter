@@ -99,6 +99,7 @@ sliderBtnLeft.addEventListener('click', moveLeft);
 sliderBtnRight.addEventListener('click', moveRight);
 
 sliderTrack.addEventListener('animationend', (animation) => {
+    watchCards();
     if (animation.animationName === 'move-left') {
         sliderTrack.classList.remove('transition-left');
         activeItems.innerHTML = leftItems.innerHTML; 
@@ -139,6 +140,7 @@ function moveRight () {
 function createCard(i) {
 let card = document.createElement('div');
 card.classList.add('card');
+card.dataset.name = petsArray[i].name;
 card.classList.add(petsArray[i].name);
 card.appendChild(document.createElement('img'))
 card.querySelector('img').src = petsArray[i].img;

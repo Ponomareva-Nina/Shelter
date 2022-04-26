@@ -313,7 +313,8 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 90px;
+  -webkit-column-gap: 90px;
+          column-gap: 90px;
 }
 
 .card {
@@ -334,6 +335,9 @@ a {
   row-gap: 30px;
   background-color: #FAFAFA;
   border-radius: 9px;
+  padding-bottom: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .card img {
@@ -354,7 +358,6 @@ a {
   height: 52px;
   border: 2px solid #F1CDB3;
   background-color: #FFFFFF;
-  margin-bottom: 30px;
 }
 
 .pet-name {
@@ -1116,6 +1119,10 @@ a {
   transition: 0.5s ease-in-out;
 }
 
+.popup:hover .popup-close {
+  background-color: #FDDCC4;
+}
+
 .popup_open {
   opacity: 1;
   visibility: visible;
@@ -1134,6 +1141,10 @@ a {
           justify-content: center;
 }
 
+.popup__wrapper:hover .popup-close {
+  background-color: transparent;
+}
+
 .popup__content {
   background-color: #FAFAFA;
   color: #000000;
@@ -1144,6 +1155,8 @@ a {
   font-size: 15px;
   max-width: 900px;
   max-height: 500px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   overflow-y: scroll;
   overflow-x: hidden;
   display: -webkit-box;
@@ -1153,6 +1166,10 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   border-radius: 9px;
+}
+
+.popup__content::-webkit-scrollbar {
+  opacity: 0;
 }
 
 .popup__content:hover {
@@ -1170,13 +1187,14 @@ a {
   padding: 50px 10px;
 }
 
-.pet-description {
+.popup-pet-description {
   margin: 40px 0;
 }
 
 .font-popup-title {
   font-size: 35px;
   line-height: 130%;
+  margin-bottom: 10px;
 }
 
 .font-popup-subtitle {
@@ -1227,7 +1245,8 @@ dd {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  row-gap: 20px;
+  row-gap: 10px;
+  padding-bottom: 25px;
 }
 
 .popup-close {
@@ -1243,11 +1262,38 @@ dd {
   background-color: transparent;
 }
 
-.popup-close:hover {
-  background-color: #FDDCC4;
-}
-
 .popup-close span {
   font-size: 20px;
+}
+
+#popup-btn:hover {
+  background-color: #FDDCC4;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1279px) and (min-width: 768px) {
+  .popup__content {
+    max-width: 630px;
+    max-height: 350px;
+  }
+  .popup__content-image img {
+    min-width: 350px;
+  }
+  .popup__content-text {
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .popup__content {
+    max-width: 240px;
+    max-height: 341px;
+  }
+  .popup__content-image {
+    display: none;
+  }
+  .popup__content-text {
+    padding: 10px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

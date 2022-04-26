@@ -268,7 +268,7 @@ a {
 }
 .items {
     display: flex;
-    gap: 90px;
+    column-gap: 90px;
 }
 .card {
     min-width: 270px;
@@ -279,6 +279,8 @@ a {
     row-gap: 30px;
     background-color: $card-background-color;
     border-radius: 9px;
+    padding-bottom: 30px;
+    box-sizing: border-box;
 
     img {
         vertical-align: bottom;
@@ -300,7 +302,6 @@ a {
         height: 52px;
         border: 2px solid $btn-border-color;
         background-color: #FFFFFF;
-        margin-bottom: 30px;
     }
 }
 .pet-name {
@@ -873,6 +874,12 @@ a {
     opacity: 0;
     visibility: hidden;
     transition: 0.5s ease-in-out;
+    
+    &:hover {
+        .popup-close {
+            background-color: $btn-hover-color;
+        }
+    }
 }
 .popup_open {
     opacity: 1;
@@ -883,6 +890,12 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    &:hover{
+        .popup-close {
+            background-color: transparent;
+        }
+    }
 }
 .popup__content {
     background-color: #FAFAFA;
@@ -894,15 +907,21 @@ a {
     font-size: 15px;
     max-width: 900px;
     max-height: 500px;
+    box-sizing: border-box;
     overflow-y: scroll;
     overflow-x: hidden;
     display: flex;
     justify-content: space-between;
     border-radius: 9px;
 
+    &::-webkit-scrollbar {
+        opacity: 0;
+    }
+
     &:hover {
         box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
     }
+    
 }
 .popup__content-image img {
     min-width: 500px;
@@ -912,12 +931,13 @@ a {
     margin: 0 10px;
     padding: 50px 10px;
 }
-.pet-description {
+.popup-pet-description {
     margin: 40px 0;
 }
 .font-popup-title {
     font-size: 35px; 
     line-height: 130%;
+    margin-bottom: 10px;
 }
 .font-popup-subtitle {
     font-size: 20px;
@@ -948,14 +968,15 @@ dt {
         left: -15px;
     }
 }
-dd{
+dd {
     display: inline;
     margin: 0;
 }
 .popup-list {
     display: flex;
     flex-direction: column;
-    row-gap: 20px;
+    row-gap: 10px;
+    padding-bottom: 25px;
 }
 .popup-close {
     position: absolute;
@@ -967,13 +988,40 @@ dd{
     box-sizing: border-box;
     border-radius: 100px;
     background-color: transparent;
-
-    &:hover {
-        background-color: $btn-hover-color;
-    }
-
+    
     span {
         font-size: 20px;
     }
 }
+#popup-btn:hover {
+    background-color: $btn-hover-color;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1279px) and (min-width: 768px) {
+    .popup__content {
+        max-width: 630px;
+        max-height: 350px; 
+    }
+    .popup__content-image img {
+        min-width: 350px;
+    }
+    .popup__content-text{
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .popup__content {
+        max-width: 240px;
+        max-height: 341px;
+    }
+    .popup__content-image {
+        display: none;
+    }
+    .popup__content-text{
+        padding: 10px;
+    }
+}
+
 // === /POP UP STYLES ALL SIZES ===
