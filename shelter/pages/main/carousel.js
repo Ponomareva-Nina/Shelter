@@ -99,7 +99,6 @@ sliderBtnLeft.addEventListener('click', moveLeft);
 sliderBtnRight.addEventListener('click', moveRight);
 
 sliderTrack.addEventListener('animationend', (animation) => {
-    watchCards();
     if (animation.animationName === 'move-left') {
         sliderTrack.classList.remove('transition-left');
         activeItems.innerHTML = leftItems.innerHTML; 
@@ -120,6 +119,7 @@ sliderTrack.addEventListener('animationend', (animation) => {
     }
     sliderBtnLeft.addEventListener('click', moveLeft); //(возвращаем слушатель после окончания анимации)
     sliderBtnRight.addEventListener('click', moveRight);
+    watchCards();
 });
 
 

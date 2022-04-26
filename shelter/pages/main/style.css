@@ -342,6 +342,7 @@ a {
 
 .card img {
   vertical-align: bottom;
+  border-radius: 9px;
 }
 
 .card:hover {
