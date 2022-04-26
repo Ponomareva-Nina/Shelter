@@ -43,49 +43,49 @@
         <h2 class="font-title pets-header">Our friends who are&nbsp;looking for a house</h2>
             <div class="pets-carousel">
                 <div class="pets-grid">
-                    <div class="pet-card">
+                    <div class="card Katrine" data-name="Katrine">
                         <img src="../../assets/images/katrine.png" alt="gray Chartreux breed cat">
                         <p class="font-title pet-name">Katrine</p>
                         <button class="btn">Learn more</button>
                     </div> 
                     
-                    <div class="pet-card">
+                    <div class="card Jennifer" data-name="Jennifer">
                         <img src="../../assets/images/jennifer.png" alt="little Labrador puppy">
                         <p class="font-title pet-name">Jennifer</p>
                         <button class="btn">Learn more</button>
                     </div>
 
-                    <div class="pet-card">
+                    <div class="card Woody" data-name="Woody">
                         <img src="../../assets/images/woody.png" alt="grown up Golden Retriever">
                         <p class="font-title pet-name">Woody</p>
                         <button class="btn">Learn more</button>
                     </div>
                     
-                    <div class="pet-card">
+                    <div class="card Sophia" data-name="Sophia">
                         <img src="../../assets/images/sophia.jpg" alt="little Labrador puppy">
                         <p class="font-title pet-name">Sophia</p>
                         <button class="btn">Learn more</button>
                     </div>
 
-                    <div class="pet-card">
+                    <div class="card Timmy" data-name="Timmy">
                         <img src="../../assets/images/timmy.png" alt="grown up Golden Retriever">
                         <p class="font-title pet-name">Timmy</p>
                         <button class="btn">Learn more</button>
                     </div>
 
-                    <div class="pet-card">
+                    <div class="card Charly" data-name="Charly">
                         <img src="../../assets/images/charly.jpg" alt="grown up Golden Retriever">
                         <p class="font-title pet-name">Charly</p>
                         <button class="btn">Learn more</button>
                     </div>
                     
-                    <div class="pet-card">
+                    <div class="card Scarlett" data-name="Scarlett">
                         <img src="../../assets/images/scarlett.png" alt="little Labrador puppy">
                         <p class="font-title pet-name">Scarlett</p>
                         <button class="btn">Learn more</button>
                     </div>
 
-                    <div class="pet-card">
+                    <div class="card Freddie" data-name="Freddie">
                         <img src="../../assets/images/freddie.png" alt="grown up Golden Retriever">
                         <p class="font-title pet-name">Freddie</p>
                         <button class="btn">Learn more</button>
@@ -131,6 +131,49 @@
             </div>
     </div>
     </footer>
-    <script src="script.js"></script>
+
+        <!-- === РOP UP LAYOUT === -->
+        <div id="pet-card-popup" class="popup">
+            <div class="popup__wrapper">
+                <button class="popup-close" id="popup-btn"><span>&#10006;</span></button>
+                <div class="popup__content">
+                    <div class="popup__content-image">
+                        <img src="../../assets/images/jennifer.png" alt="pet-photo">
+                    </div>
+                    <div class="popup__content-text">
+                        <div class="popup-pet-name font-popup-title">Jennifer</div>
+                        <div class="popup-pet-type font-popup-subtitle">Dog - Labrador</div>
+                        <div class="popup-pet-description">Jennifer is a sweet 2 months old Labrador that is
+                            patiently waiting to find a new forever home. This
+                            girl really enjoys being able to go outside to run
+                            and play, but won't hesitate to play up a storm in
+                            the house if she has all of her favorite toys.
+                        </div>
+                        <dl class="popup-list">
+                            <div>
+                                <dt class="font-popup-list_bold ">Age</dt>
+                                <dd class="pet-age-parameter">2 months</dd>
+                            </div>
+                            <div>
+                                <dt class="font-popup-list_bold ">Inoculations</dt>
+                                <dd class="pet-inoculations-parameter">none</dd>
+                            </div>
+                            <div>
+                                <dt class="font-popup-list_bold">Diseases</dt>
+                                <dd class="pet-diseases-parameter">none</dd>
+                            </div>
+                            <div>
+                                <dt class="font-popup-list_bold">Parasites</dt>
+                                <dd class="pet-parasites-parameter">none</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- === /РOP UP LAYOUT === -->
+
+    <script type="text/javascript" src="burger.js"></script>
+    <script type="text/javascript" src="popup.js"></script> 
 </body>
 </html>

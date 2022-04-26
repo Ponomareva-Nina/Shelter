@@ -197,7 +197,7 @@ a {
   background-color: #FDDCC4;
 }
 
-.pet-card {
+.card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -216,16 +216,16 @@ a {
   border-radius: 9px;
 }
 
-.pet-card:hover {
+.card:hover {
   cursor: pointer;
   background-color: #FFFFFF;
 }
 
-.pet-card:hover .btn {
+.card:hover .btn {
   background-color: #FDDCC4;
 }
 
-.pet-card .btn {
+.card .btn {
   width: 187px;
   height: 52px;
   border: 2px solid #F1CDB3;
@@ -566,6 +566,210 @@ a {
     height: 100vh;
     background-color: rgba(41, 41, 41, 0.6);
     z-index: 1;
+  }
+}
+
+.no-scroll {
+  overflow-y: hidden;
+}
+
+.popup {
+  position: fixed;
+  background-color: rgba(41, 41, 41, 0.6);
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.popup:hover .popup-close {
+  background-color: #FDDCC4;
+}
+
+.popup_open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup__wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.popup__wrapper:hover .popup-close {
+  background-color: transparent;
+}
+
+.popup__content {
+  background-color: #FAFAFA;
+  color: #000000;
+  letter-spacing: 0.06em;
+  line-height: 110%;
+  font-family: "Georgia";
+  font-weight: 400;
+  font-size: 15px;
+  max-width: 900px;
+  max-height: 500px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 9px;
+}
+
+.popup__content::-webkit-scrollbar {
+  opacity: 0;
+}
+
+.popup__content:hover {
+  -webkit-box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+          box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+}
+
+.popup__content-image img {
+  min-width: 500px;
+  border-radius: 9px 0px 0px 9px;
+}
+
+.popup__content-text {
+  margin: 0 10px;
+  padding: 50px 10px;
+}
+
+.popup-pet-description {
+  margin: 40px 0;
+}
+
+.font-popup-title {
+  font-size: 35px;
+  line-height: 130%;
+  margin-bottom: 10px;
+}
+
+.font-popup-subtitle {
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+}
+
+.font-popup-list_bold {
+  font-weight: 700;
+}
+
+dl {
+  margin: 0;
+  padding: 0;
+}
+
+dt {
+  display: inline;
+  position: relative;
+}
+
+dt:after {
+  content: ": ";
+}
+
+dt:before {
+  content: "";
+  max-width: 2px;
+  max-height: 2px;
+  border: 2px solid #F1CDB3;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: -15px;
+}
+
+dd {
+  display: inline;
+  margin: 0;
+}
+
+.popup-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 10px;
+  padding-bottom: 25px;
+}
+
+.popup-close {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 52px;
+  height: 52px;
+  border: 2px solid #F1CDB3;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 100px;
+  background-color: transparent;
+}
+
+.popup-close span {
+  font-size: 20px;
+}
+
+#popup-btn:hover {
+  background-color: #FDDCC4;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1279px) and (min-width: 768px) {
+  .popup__content {
+    max-width: 630px;
+    max-height: 350px;
+  }
+  .popup__content-image img {
+    min-width: 350px;
+  }
+  .popup__content-text {
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .popup__content {
+    max-width: 240px;
+    max-height: 341px;
+  }
+  .popup__content-image {
+    display: none;
+  }
+  .popup__content-text {
+    padding: 10px;
   }
 }
 /*# sourceMappingURL=style.css.map */
