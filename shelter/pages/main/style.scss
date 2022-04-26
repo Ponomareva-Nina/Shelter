@@ -760,7 +760,7 @@ a {
         top: 45px;
         right: 50px;
         z-index: 5;
-        transition: .3s;
+        transition: .5s;
 
         &:hover {
             cursor: pointer;
@@ -785,7 +785,7 @@ a {
         height: 100vh;
         background: #292929;
         padding: 30px 10px;
-        transition: right 0.3s ease 0s;
+        transition: right .5s ease-in-out;
         display: flex;
         flex-direction: column;
         overflow: auto;
@@ -800,7 +800,7 @@ a {
             height: 120px;
             background-color: #292929;
             z-index: 4;
-            transition: right 0.3s ease 0s;
+            transition: right .5s ease-in-out;
         }
     }
     .navigation-panel_active {
