@@ -38,9 +38,4 @@ function menuToggle() {
 };
 
 // === /BURGER MENU REALIZATION ===
-
-
-// === PET CARDS POPUP === 
-
-
-// === /PET CARDS POPUP === 
+ 
