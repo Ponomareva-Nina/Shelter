@@ -102,7 +102,7 @@ a {
     }
 }
 
-//HEADER
+// === HEADER DESKTOP === 
 
 .header {
     display: flex;
@@ -159,8 +159,9 @@ a {
 .burger-button {
     display: none;
 }
+// === /HEADER DESKTOP === 
 
-// SECTION START-SCREEN
+// === SECTION START-SCREEN DESKTOP ===
 
 .start-screen-wrapper {
     background: URL("../../assets/images/noise_transparent.png"), 
@@ -212,8 +213,9 @@ a {
     letter-spacing: 0.05em;
     color: #292929;
 }
+// === /SECTION START-SCREEN DESKTOP ===
 
-// SECTION ABOUT
+// === SECTION ABOUT DESKTOP ===
 
 .about {
     display: flex;
@@ -232,7 +234,9 @@ a {
     }
 }
 
-// SECTION OUR PETS
+// === /SECTION ABOUT DESKTOP ===
+
+// === SECTION OUR PETS DESKTOP ===
 
 .pets{
     background-color: $pets-section-bg-color;
@@ -328,8 +332,9 @@ a {
     }
 }
 
+// === /SECTION OUR PETS DESKTOP ===
 
-// SECTION HELP
+// === SECTION HELP DESKTOP ===
 
 .help {
     padding: 80px 30px 100px;
@@ -367,7 +372,9 @@ a {
     }
 }
 
-// SECTION DONATION
+// === /SECTION HELP DESKTOP ===
+
+// === SECTION DONATION DESKTOP ===
 
 .donation {
     background-color: $donation-section-color;
@@ -412,7 +419,9 @@ a {
     line-height: 115%;
 }
 
-// FOOTER
+// === /SECTION DONATION DESKTOP ===
+
+// === FOOTER DESKTOP ===
 
 .footer {
     background: URL("../../assets/images/noise_transparent.png"),
@@ -451,7 +460,9 @@ a {
     vertical-align: bottom;
 }
 
-// === CAROUSEL ANIMATION ===
+// === /FOOTER DESKTOP ===
+
+// === CAROUSEL ANIMATION DESKTOP ===
 @keyframes move-left {
     from {left: -1080px}
     to {left: 0px}
@@ -471,7 +482,8 @@ a {
     animation-name: move-right;
     animation-duration: 1s;
 }
-// === /CAROUSEL ANIMATION ===
+// === /CAROUSEL ANIMATION DESKTOP ===
+
 
 //MEDIA QUERIES:
 
@@ -557,6 +569,8 @@ a {
         padding: 0;
     }
 
+    // === CAROUSEL ANIMATION TABLET ===
+
     @keyframes move-left {
         from {left: -620px}
         to {left: 0px}
@@ -567,6 +581,7 @@ a {
         to {left: -1240px}
     }
  
+    // === /CAROUSEL ANIMATION TABLET ===
 }
 
 
@@ -649,17 +664,6 @@ a {
             display: none;
         }
     }
-
-    @keyframes move-left {
-        from {left: -310px}
-        to {left: 0px}
-    }
-    
-    @keyframes move-right {
-        from {left: -310px}
-        to {left: -620px}
-    }
-    
     .arrow-back {
         position: absolute;
         bottom: -72px;
@@ -751,6 +755,18 @@ a {
         padding-top: 0;
     }
 
+     // === CAROUSEL ANIMATION MOBILE ===
+    @keyframes move-left {
+        from {left: -310px}
+        to {left: 0px}
+    }
+    
+    @keyframes move-right {
+        from {left: -310px}
+        to {left: -620px}
+    }
+    // === /CAROUSEL ANIMATION MOBILE ===
+
     //BURGER MENU 
     .burger-button {
         display: block;
@@ -826,7 +842,7 @@ a {
         overflow-y: hidden;
     }
 
-    //затемнение 
+    // === DARKEN INACTIVE AREA ===
     .header_active::after {
         content: "";
         position: fixed;
@@ -837,6 +853,112 @@ a {
         background-color: rgba(41, 41, 41, 0.6);
         z-index: 1;
     }
-    // --------------------
+    // === /DARKEN INACTIVE AREA ===
 }
 
+// === POP UP STYLES ALL SIZES ===
+.popup {
+    position: fixed;
+    background-color: rgba(41, 41, 41, 0.6);
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.popup__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.popup__content {
+    background-color: #FAFAFA;
+    color: #000000;
+    letter-spacing: 0.06em;
+    line-height: 110%;
+    font-family: "Georgia"; 
+    font-weight: 400; 
+    font-size: 15px;
+    max-width: 900px;
+    max-height: 500px;
+    overflow-y: scroll;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 9px;
+
+    &:hover {
+        box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+    }
+}
+.popup__content-image img {
+    min-width: 500px;
+    border-radius: 9px 0px 0px 9px;
+}
+.popup__content-text {
+    margin: 0 10px;
+    padding: 50px 10px;
+}
+.pet-description {
+    margin: 40px 0;
+}
+.font-popup-title {
+    font-size: 35px; 
+    line-height: 130%;
+}
+.font-popup-subtitle {
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+}
+.font-popup-list_bold {
+    font-weight: 700;
+}
+dl {
+    margin: 0;
+    padding: 0;
+}
+dt {
+    display: inline;
+    position: relative;
+    &:after {
+        content: ": ";
+    }
+    &:before{
+        content: "";
+        max-width: 2px;
+        max-height: 2px;
+        border: 2px solid #F1CDB3;
+        border-radius: 100%;
+        position: absolute;
+        top: 50%;
+        left: -15px;
+    }
+}
+dd{
+    display: inline;
+    margin: 0;
+}
+.popup-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.popup-close {
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 52px;
+    height: 52px;
+    border: 2px solid #F1CDB3;
+    box-sizing: border-box;
+    border-radius: 100px;
+    background-color: transparent;
+
+    span {
+        font-size: 20px;
+    }
+}
+// === /POP UP STYLES ALL SIZES ===
