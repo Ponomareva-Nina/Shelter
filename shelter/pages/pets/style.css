@@ -64,6 +64,7 @@ a {
   position: sticky;
   top: 0;
   left: 0;
+  z-index: 1;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -154,11 +155,20 @@ a {
   max-width: 400px;
 }
 
+.pets-carousel {
+  max-width: 1200px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
 .pets-grid {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (270px)[4];
       grid-template-columns: repeat(4, 270px);
+  -ms-grid-rows: (auto)[2];
+      grid-template-rows: repeat(2, auto);
+  grid-auto-flow: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -166,6 +176,13 @@ a {
           column-gap: 40px;
   row-gap: 30px;
   margin-top: 60px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  position: relative;
+  left: 0;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .btn {
@@ -283,11 +300,11 @@ a {
   cursor: pointer;
 }
 
-.pagination-panel .current {
+.pagination-panel .current-page {
   background-color: #FDDCC4;
 }
 
-.pagination-panel .current:hover {
+.pagination-panel .current-page:hover {
   cursor: default;
 }
 
@@ -371,11 +388,15 @@ a {
   .pets {
     padding-bottom: 75px;
   }
+  .pets-carousel {
+    max-width: 580px;
+  }
   .pets-grid {
     -ms-grid-columns: (270px)[2];
         grid-template-columns: repeat(2, 270px);
-    grid-auto-rows: auto auto auto 0;
-    overflow: hidden;
+    -ms-grid-rows: (auto)[3];
+        grid-template-rows: repeat(3, auto);
+    grid-auto-flow: column;
     margin-top: 30px;
     padding-bottom: 0;
   }
@@ -427,9 +448,6 @@ a {
   .pets-carousel {
     max-width: 270px;
     overflow: hidden;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     margin: 0 auto;
   }
   .pets-grid {
@@ -739,7 +757,8 @@ dd {
 }
 
 .popup-close span {
-  font-size: 20px;
+  text-align: center;
+  vertical-align: middle;
 }
 
 #popup-btn:hover {

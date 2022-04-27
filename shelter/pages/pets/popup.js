@@ -105,8 +105,7 @@ let popupPetParasites = document.querySelector('.pet-parasites-parameter');
 watchCards();
 popupCloseBtn.addEventListener('click', popupClose);
 
-
-// === закрытие попапа на клик по свободной области: ===
+// === закрываем pop-up на клик по свободной области: ===
 popup.addEventListener('click', elem => {
     if (popup.classList.contains('popup_open')) {
         let target = elem.target;
@@ -117,7 +116,8 @@ popup.addEventListener('click', elem => {
     }    
 });
 
-//функция для навешивания обработчика на карточки (в т.ч. при анимации карусели)
+
+//функция для отслеживания pop-up событий на на карточках
 function watchCards() {
     let cards = document.querySelectorAll('.card');
     cards.forEach(card => {
