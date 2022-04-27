@@ -1173,7 +1173,7 @@ a {
 }
 
 .popup__content::-webkit-scrollbar {
-  opacity: 0;
+  display: none;
 }
 
 .popup__content:hover {

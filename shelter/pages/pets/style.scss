@@ -551,6 +551,7 @@ a {
 
     &::-webkit-scrollbar {
         opacity: 0;
+        display: none;
     }
 
     &:hover {
@@ -563,8 +564,8 @@ a {
     border-radius: 9px 0px 0px 9px;
 }
 .popup__content-text {
-    margin: 0 10px;
-    padding: 50px 10px;
+    margin-top: 50px;
+    padding: 10px;
 }
 .popup-pet-description {
     margin: 40px 0;
@@ -643,7 +644,7 @@ dd {
         min-width: 350px;
     }
     .popup__content-text{
-        padding: 10px;
+        margin-top: 10px;
     }
 }
 
@@ -656,7 +657,17 @@ dd {
         display: none;
     }
     .popup__content-text{
-        padding: 10px;
+        margin-top: 10px;
+        text-align: center;
+    }
+    .popup-list {
+        row-gap: 10px;
+        margin-left: 15px;
+        text-align: start;
+    }
+    .popup-pet-description {
+        margin: 20px 0;
+        text-align: justify;
     }
 }
 
