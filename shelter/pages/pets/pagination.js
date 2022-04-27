@@ -26,34 +26,76 @@ if (mobile.matches) { numberOfCardsOnPage = 3;
 
 let movePosition = itemWidth * numberOfColumnsOnPage;
 let position = 0;
+let currentPage = 1;
 
 document.addEventListener('DOMContentLoaded', createCardTemplate());
 watchCards(); // на созданных карточках отслеживаем pop-up события 
 
+btnCheck();
 
-bntBack.addEventListener('click', moveRight);
-btnForward.addEventListener('click', moveLeft);
+bntBack.addEventListener('click', moveLeft);
+btnForward.addEventListener('click', moveRight);
 btnFirstPage.addEventListener('click', moveFirst);
 btnLastPage.addEventListener('click', moveLast);
 
 
 function moveLeft(){
-    position -= movePosition;
-    petsTemplate.style.transform = `translateX(${position}px)`;
-};
-function moveRight(){
+    currentPage--;
     position += movePosition;
     petsTemplate.style.transform = `translateX(${position}px)`;
-};
-function moveLast(){
-    position = movePosition * (numberOfPages - 1);
-    petsTemplate.style.transform = `translateX(-${position}px)`;
-};
-function moveFirst(){
-    position = 0;
-    petsTemplate.style.transform = `translateX(${position}px)`;
+    currentPageNumber.innerText = `${currentPage}`
+    btnCheck();
 };
 
+function moveRight(){
+    currentPage++;
+    position -= movePosition;
+    petsTemplate.style.transform = `translateX(${position}px)`;
+    currentPageNumber.innerText = `${currentPage}`;
+    btnCheck();
+};
+
+function moveLast(){
+    currentPage = numberOfPages;
+    position = -(movePosition * (numberOfPages - 1));
+    petsTemplate.style.transform = `translateX(${position}px)`;
+    currentPageNumber.innerText = `${currentPage}`;
+    btnCheck();
+};
+
+function moveFirst(){
+    currentPage = 1;
+    position = 0;
+    petsTemplate.style.transform = `translateX(${position}px)`;
+    currentPageNumber.innerText = `${currentPage}`;
+    btnCheck();
+};
+
+//функция для отключения/включения кнопок пагинации в зависимости от текущей страницы
+function btnCheck(){
+    if(currentPage === 1){
+    bntBack.disabled = true;
+    btnFirstPage.disabled = true;
+    bntBack.classList.add('disabled');
+    btnFirstPage.classList.add('disabled');
+    } else {
+        bntBack.disabled = false;
+        btnFirstPage.disabled = false;
+        bntBack.classList.remove('disabled');
+        btnFirstPage.classList.remove('disabled')
+    };
+    if(currentPage === numberOfPages){
+        btnForward.disabled = true;
+        btnLastPage.disabled = true;
+        btnForward.classList.add('disabled');
+        btnLastPage.classList.add('disabled');
+    } else {
+        btnForward.disabled = false;
+        btnLastPage.disabled = false;
+        btnForward.classList.remove('disabled');
+        btnLastPage.classList.remove('disabled');
+    };   
+}
 function createCard(i) {
     let card = document.createElement('div');
     card.classList.add('card');
