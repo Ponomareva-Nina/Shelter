@@ -77,9 +77,9 @@ a {
     position: sticky;
     top: 0;
     left: 0;
-    z-index: 1;
     height: fit-content;
     background-color: #FFFFFF;
+    z-index: 1;
 }
 .header_inner {
     max-width: 1200px;
@@ -160,9 +160,7 @@ a {
     row-gap: 30px;
     margin-top: 60px;
     justify-content: start;
-    position: relative;
-    left: 0;
-    transition: 0.5s ease;
+    transition: 0.5s;
 }
 .btn {
     display: flex;
@@ -665,7 +663,3 @@ dd {
 
 // === /POP UP STYLES ALL SIZES ===
 
-// === PAGINATION ANIMATION ===
-
-
-// === PAGINATION ANIMATION ===
