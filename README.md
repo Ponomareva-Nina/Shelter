@@ -1,2 +1,3 @@
 # ponomareva-nina-JSFE2022Q1
-Private repository for @ponomareva-nina
+
+https://ponomareva-nina.github.io/Shelter/shelter/pages/main/index.html
